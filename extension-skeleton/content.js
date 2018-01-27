@@ -1,5 +1,5 @@
 var elements = document.getElementsByTagName('*');
-
+var req = new XMLHttpRequest();
 for (var i = 0; i < elements.length; i++) {
     var element = elements[i];
 
