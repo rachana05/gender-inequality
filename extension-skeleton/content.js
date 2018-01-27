@@ -8,21 +8,33 @@ for (var i = 0; i < elements.length; i++) {
 
         if (node.nodeType === 3) {
             var text = node.nodeValue;
+            text = text.toLowerCase();
+            var origText = text;
 
-            var replacedText;
-            replacedText = text.replace(/Trump/g, '-------------');
-            replacedText = text.replace(/\bWeinstein\b/g, 'Stay strong :)');
+            var badWords = ["trump","weinstein","fag","slut","bitch"]
+            var a = badWords.indexOf(origText);
+
+            
+            if (a !== -1) {
+                text = text.replace(/badWords[a]/gi, 'moron');
+            }
             /*
-            replacedText = text.replace(/\bTrump\b/g, '-------------');
-            replacedText = text.replace(/\bTrump\b/g, '-------------');
-            replacedText = text.replace(/\bTrump\b/g, '-------------');
-            replacedText = text.replace(/\bTrump\b/g, '-------------');
+            text = text.replace(/donald trump/gi, 'moron');
+            text = text.replace(/weinstein/gi, 'ew');
+            text = text.replace(/fag/gi, ':( :(');
+            text = text.replace(/slut/gi, 'I am a queen');
+
+
+            /*
+            text = text.replace(/\bTrump\b/g, '-------------');
+            text = text.replace(/\bTrump\b/g, '-------------');
+            text = text.replace(/\bTrump\b/g, '-------------');
             */
 
 
-            if (replacedText !== text) {
-                element.replaceChild(document.createTextNode(replacedText), node);
-            }
+            //if (text !== origText) {
+                element.replaceChild(document.createTextNode(text), node);
+            //}
         }
     }
 }
