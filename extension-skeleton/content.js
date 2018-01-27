@@ -9,8 +9,16 @@ for (var i = 0; i < elements.length; i++) {
         if (node.nodeType === 3) {
             var text = node.nodeValue;
 
+            var replacedText;
+            replacedText = text.replace(/Trump/g, '-------------');
+            replacedText = text.replace(/\bWeinstein\b/g, 'Stay strong :)');
+            /*
+            replacedText = text.replace(/\bTrump\b/g, '-------------');
+            replacedText = text.replace(/\bTrump\b/g, '-------------');
+            replacedText = text.replace(/\bTrump\b/g, '-------------');
+            replacedText = text.replace(/\bTrump\b/g, '-------------');
+            */
 
-            var replacedText = text.replace(/General/gi, '-------------');
 
             if (replacedText !== text) {
                 element.replaceChild(document.createTextNode(replacedText), node);
