@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
  
-  "name": "Python Chrome Plugin",
-  "description": "This extension runs Python code.",
+  "name": "SheHacks Demo",
+  "description": "Chrome Extension Demo.",
   "version": "1.0",
  
   "browser_action": {
