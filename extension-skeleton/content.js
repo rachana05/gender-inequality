@@ -7,8 +7,23 @@ for (var i = 0; i < elements.length; i++) {
         var node = element.childNodes[j];
 
         if (node.nodeType === 3) {
+            var request = new XMLHttpRequest();
             var text = node.nodeValue;
-            var replacedText = text.replace(/slut/gi, 'beauty');
+
+            request.onreadystatechange = function(){
+              if(this.readyState == 4 && this.status == 200){
+                text.innerHTML = this.responseText;
+              }else{
+                text.innerHTML = " ";
+              }
+            }
+
+            request.open('POST', '/', true);
+            request.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+            request.send(text);
+
+
+            var replacedText = text.replace(/General/gi, '-------------');
 
             if (replacedText !== text) {
                 element.replaceChild(document.createTextNode(replacedText), node);
