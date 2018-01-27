@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
- 
+
   "name": "SheHacks Demo",
   "description": "Chrome Extension Demo.",
   "version": "1.0",
- 
+
   "browser_action": {
     "default_icon": "Enough.png",
     "default_popup": "popup.html"
@@ -13,5 +13,17 @@
 
   "permissions": [
     "activeTab"
+  ]
+
+  "content_scripts": [
+      {
+          "matches": [
+              "*://*/*"
+          ],
+          "js": [
+              "content.js"
+          ],
+          "run_at": "document_end"
+      }
   ]
 }
