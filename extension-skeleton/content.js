@@ -8,7 +8,7 @@ for (var i = 0; i < elements.length; i++) {
 
         if (node.nodeType === 3) {
             var text = node.nodeValue;
-            text = text.toLowerCase();
+            //text = text.toLowerCase();
             var origText = text;
 
             //var badWords = ["trump","weinstein","fag","slut","bitch"]
@@ -18,25 +18,29 @@ for (var i = 0; i < elements.length; i++) {
             //if (a !== -1) {
             //    text = text.replace(/badWords[a]/gi, 'moron');
             //}
+            
             var quotes = ["To succeed in life, you need three things: a wishbone, a backbone and a funny \
             bone", "Nothing is impossible. The word itself says I'm possible!", "Banana", "Orange", "Apple",
             "Live Laugh Love", ":( :( :(", "Juicy Couture", "~*~*~Ghéy~*~*~", "✧・ﾟ:* ", " (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧",
-            "Bed Bath & Beyond", "Cheeto", "Nachos","Taco", "Burrito","dumpling"
-
-
+            "Bed Bath & Beyond", "Cheeto", "Nachos","Taco", "Burrito","dumpling", "( ͡° ͜ʖ ͡°)", "ErMaGerd"
             ]
+            
             
             var randInt = Math.floor(Math.random() * quotes.length)
 
             text = text.replace(/trump/gi, quotes[randInt]);
             text = text.replace(/weinstein/gi, quotes[randInt]);
-            text = text.replace(/fag/gi, quotes[randInt]);
+            text = text.replace(/pence/gi, quotes[randInt]);
+            text = text.replace(/fag/gi, "---");
             text = text.replace(/slut/gi, quotes[randInt]);
-            text = text.replace(/dyke/gi, quotes[randInt]);
+            text = text.replace(/dyke/gi, "****");
             text = text.replace(/bitch/gi, quotes[randInt]);
             text = text.replace(/pussy/gi, quotes[randInt]);
             text = text.replace(/p\*ssy/gi, quotes[randInt]);
             text = text.replace(/penis/gi, quotes[randInt]);
+            text = text.replace(/meninist/gi, quotes[randInt]);
+            text = text.replace(/paul ryan/gi, quotes[randInt]);
+            text = text.replace(/fuck/gi, quotes[randInt]);
 
 
 
