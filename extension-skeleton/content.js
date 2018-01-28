@@ -79,6 +79,7 @@ for (var i = 0; i < elements.length; i++) {
             text = text.replace(/meninist/gi, funLib[randInt]);
             text = text.replace(/palin/gi, funLib[randInt]);
 
+<<<<<<< HEAD
             text = text.replace(/shit/gi, funLib[randInt]);
             text = text.replace(/fuck/gi, funLib[randInt]);
             text = text.replace(/damn/gi, funLib[randInt]);
@@ -87,6 +88,21 @@ for (var i = 0; i < elements.length; i++) {
             text = text.replace(/asshole/gi, funLib[randInt]);
             text = text.replace(/bastard/gi, funLib[randInt]);
             text = text.replace(/douche/gi, funLib[randInt]);
+=======
+
+            //if (a !== -1) {
+            //    text = text.replace(/badWords[a]/gi, 'moron');
+            //}
+
+            var quotes = ["To succeed in life, you need three things: a wishbone, a backbone and a funny \
+            bone", "Nothing is impossible. The word itself says I'm possible!", "Banana", "Orange", "Apple",
+            "Live Laugh Love", ":( :( :(", "Juicy Couture", "~*~*~Ghéy~*~*~", "✧・ﾟ:* ", " (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧",
+            "Bed Bath & Beyond", "Cheeto", "Nachos","Taco", "Burrito","dumpling", "( ͡° ͜ʖ ͡°)", "ErMaGerd"
+            ]
+
+
+            var randInt = Math.floor(Math.random() * quotes.length)
+>>>>>>> 9f88993f8383c3c0502baa5c95e6d5300b0e1dda
 
 
             text = text.replace(/bitch/gi, funLib[randInt]);
