@@ -14,18 +14,18 @@ for (var i = 0; i < elements.length; i++) {
             //var badWords = ["trump","weinstein","fag","slut","bitch"]
             //var a = badWords.indexOf(origText);
 
-            
+
             //if (a !== -1) {
             //    text = text.replace(/badWords[a]/gi, 'moron');
             //}
-            
+
             var quotes = ["To succeed in life, you need three things: a wishbone, a backbone and a funny \
             bone", "Nothing is impossible. The word itself says I'm possible!", "Banana", "Orange", "Apple",
             "Live Laugh Love", ":( :( :(", "Juicy Couture", "~*~*~Ghéy~*~*~", "✧・ﾟ:* ", " (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧",
             "Bed Bath & Beyond", "Cheeto", "Nachos","Taco", "Burrito","dumpling", "( ͡° ͜ʖ ͡°)", "ErMaGerd"
             ]
-            
-            
+
+
             var randInt = Math.floor(Math.random() * quotes.length)
 
             text = text.replace(/trump/gi, quotes[randInt]);
